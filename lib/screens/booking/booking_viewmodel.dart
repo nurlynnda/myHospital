@@ -8,8 +8,8 @@ import 'booking_page.dart';
 import 'bookingbody.dart';
 import '';
 
-class bookingViewModel extends Viewmodel {
-  final _service = locator<bookingService>();
+class BookingViewModel extends Viewmodel {
+  final _service = locator<BookingService>();
 
   late List<Bookdata> _list;
 

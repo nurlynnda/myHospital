@@ -6,10 +6,9 @@ import 'package:doctor_app/screens/booking/booking_viewmodel.dart';
 import 'bookingtile.dart';
 
 class BookingBodyPage extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-    return SelectorView<bookingViewModel, int>(
+    return SelectorView<BookingViewModel, int>(
         selector: (_, vm) => vm.dataCount,
         builder: (_, vm, __, ___) {
           print('Build ListView');

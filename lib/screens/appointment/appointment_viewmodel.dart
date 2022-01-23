@@ -2,13 +2,10 @@ import 'package:doctor_app/app/service_locator.dart';
 import 'package:doctor_app/models/appointment.dart';
 import 'package:doctor_app/screens/viewmodel.dart';
 import 'package:doctor_app/services/appointment/appointment_service.dart';
-import 'package:doctor_app/services/appointment/appointment_service.dart';
 //import 'package:doctor_app/services/appointment/appointment_service_mock.dart';
 
-import '';
-
-class appointmentViewModel extends Viewmodel {
-  final _service = locator<appointmentService>();
+class AppointmentViewModel extends Viewmodel {
+  final _service = locator<AppointmentService>();
 
   late List<Appointment> _list;
 

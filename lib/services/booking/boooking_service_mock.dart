@@ -1,7 +1,7 @@
 import '../../models/booking.dart';
 import 'booking_service.dart';
 
-class bookingServiceMock extends bookingService {
+class BookingServiceMock extends BookingService {
   final mockData = <Bookdata>[
     Bookdata(
         id: 001,

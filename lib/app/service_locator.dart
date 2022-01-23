@@ -26,12 +26,12 @@ void initializeServiceLocator() {
 
   //TODO To switch between service, comment out the line below accordingly
   locator.registerLazySingleton<ProfileService>(() => ProfileServiceMock());
-  locator.registerLazySingleton<bookingService>(() => bookingServiceMock());
-  locator.registerLazySingleton<appointmentService>(
-      () => appointmentServiceMock());
+  locator.registerLazySingleton<BookingService>(() => BookingServiceMock());
+  locator.registerLazySingleton<AppointmentService>(
+      () => AppointmentServiceMock());
   // Viewmodels
   locator.registerLazySingleton<ProfileViewModel>(() => ProfileViewModel());
-  locator.registerLazySingleton<bookingViewModel>(() => bookingViewModel());
-  locator.registerLazySingleton<appointmentViewModel>(
-      () => appointmentViewModel());
+  locator.registerLazySingleton<BookingViewModel>(() => BookingViewModel());
+  locator.registerLazySingleton<AppointmentViewModel>(
+      () => AppointmentViewModel());
 }

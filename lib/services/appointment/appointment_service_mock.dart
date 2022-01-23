@@ -5,8 +5,8 @@ import '../../models/appointment.dart';
 import 'appointment_service.dart';
 import '../../services/booking/booking_service.dart';
 
-class appointmentServiceMock extends appointmentService {
-  late bookingServiceMock doctor;
+class AppointmentServiceMock extends AppointmentService {
+  late BookingServiceMock doctor;
 
   final mockData = <Appointment>[
     Appointment(Bookdata(doctor: 'dsa', department: 'dsafvsd', time: 'dsaa'),

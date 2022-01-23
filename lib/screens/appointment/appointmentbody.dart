@@ -10,7 +10,7 @@ class AppointmentBodyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SelectorView<appointmentViewModel, int>(
+    return SelectorView<AppointmentViewModel, int>(
         selector: (_, vm) => vm.dataCount,
         builder: (_, vm, __, ___) {
           print('Build ListView');
@@ -19,7 +19,7 @@ class AppointmentBodyPage extends StatelessWidget {
             separatorBuilder: (_, __) => Divider(
               color: Colors.black,
             ),
-            itemBuilder: (_, index) => appointmentTile(index),
+            itemBuilder: (_, index) => AppointmentTile(index),
           );
         });
   }

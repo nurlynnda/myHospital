@@ -11,7 +11,7 @@ class BookingTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SelectorView<bookingViewModel, Bookdata>(
+    return SelectorView<BookingViewModel, Bookdata>(
         selector: (_, vm) => vm.getbooking(index),
         builder: (_, vm, booking, ___) {
           print('Build ListTile ');
@@ -57,5 +57,3 @@ class BookingTile extends StatelessWidget {
         });
   }
 }
-
-
