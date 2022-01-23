@@ -6,7 +6,6 @@ import 'package:doctor_app/services/booking/booking_service.dart';
 //import 'package:doctor_app/services/booking/booking_service_mock.dart';
 import 'booking_page.dart';
 import 'bookingbody.dart';
-import '';
 
 class BookingViewModel extends Viewmodel {
   final _service = locator<BookingService>();

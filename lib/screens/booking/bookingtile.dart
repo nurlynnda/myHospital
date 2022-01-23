@@ -14,8 +14,9 @@ class BookingTile extends StatelessWidget {
     return SelectorView<BookingViewModel, Bookdata>(
         selector: (_, vm) => vm.getbooking(index),
         builder: (_, vm, booking, ___) {
+          onTap:
+          () {};
           print('Build ListTile ');
-
           return Container(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
