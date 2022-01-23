@@ -6,6 +6,7 @@ class AppointmentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.cyan[50],
       appBar: AppBar(
         backgroundColor: Colors.cyan[200],
         title: Text('Appointment'),
