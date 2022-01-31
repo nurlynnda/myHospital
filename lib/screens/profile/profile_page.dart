@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'package:doctor_app/models/profile.dart';
 import 'package:doctor_app/screens/home/bottombar.dart';
 import 'package:doctor_app/screens/profile/profilebody.dart';

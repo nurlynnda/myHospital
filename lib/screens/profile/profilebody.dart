@@ -20,6 +20,7 @@ class ProfileBodyPage extends StatelessWidget {
             body: SafeArea(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
                   radius: 50,

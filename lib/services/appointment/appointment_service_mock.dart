@@ -9,8 +9,11 @@ class AppointmentServiceMock extends AppointmentService {
   late BookingServiceMock doctor;
 
   final mockData = <Appointment>[
-    Appointment(Bookdata(doctor: 'dsa', department: 'dsafvsd', time: 'dsaa'),
-        id: 001, clinic: 'Klinik Haiwan', room: 'ABC'),
+    Appointment(
+        Bookdata(doctor: 'Dr Mohd Safiee', department: 'dsafvsd', time: 'dsaa'),
+        id: 001,
+        clinic: 'Klinik Haiwan',
+        room: 'ABC'),
   ];
 
   @override
