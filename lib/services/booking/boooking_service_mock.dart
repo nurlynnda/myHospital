@@ -15,6 +15,14 @@ class BookingServiceMock extends BookingService {
         time: '12.00pm'),
     Bookdata(
         id: 002, doctor: 'Dr.Goh', department: 'Cardiology', time: '2.00pm'),
+    Bookdata(
+        id: 002, doctor: 'Dr.aaaa', department: 'Cardiology', time: '2.00pm'),
+    Bookdata(
+        id: 002, doctor: 'Dr.Goh', department: 'Cardiology', time: '2.00pm'),
+    Bookdata(
+        id: 002, doctor: 'Dr.Goh', department: 'Cardiology', time: '2.00pm'),
+    Bookdata(
+        id: 002, doctor: 'Dr.Goh', department: 'Cardiology', time: '2.00pm'),
   ];
 
   @override

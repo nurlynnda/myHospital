@@ -29,6 +29,7 @@ void initializeServiceLocator() {
   locator.registerLazySingleton<BookingService>(() => BookingServiceMock());
   locator.registerLazySingleton<AppointmentService>(
       () => AppointmentServiceMock());
+
   // Viewmodels
   locator.registerLazySingleton<ProfileViewModel>(() => ProfileViewModel());
   locator.registerLazySingleton<BookingViewModel>(() => BookingViewModel());
