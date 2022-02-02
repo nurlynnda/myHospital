@@ -23,6 +23,7 @@ class BookingTile extends StatelessWidget {
                 print("Container clicked");
               },
               child: Container(
+                  margin: EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                       color: Colors.cyan[800],
                       borderRadius: BorderRadius.circular(10.0),
