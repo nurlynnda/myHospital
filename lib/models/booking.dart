@@ -13,9 +13,24 @@ class Bookdata {
             department: from.department,
             time: from.time);
 
-//   Bookdata.fromJson(Map<String, dynamic> json)
-//       : this(id: json['id'], doctor: json['doctor'], description: json['description'] , );
+  Bookdata.fromJson(Map<String, dynamic> json)
+      : this(
+          id: json['id'],
+          doctor: json['doctor'],
+          department: json['department'],
+          time: json['time'],
+        );
 
-//   Map<String, dynamic> toJson() =>
-//       {'id': id, 'doctor': doctor, 'description': description};
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'doctor': doctor,
+        'department': department,
+        'time': time,
+      };
+
+  copyWith({id, doctor, department, time}) => Bookdata(
+      id: id ?? this.id,
+      doctor: doctor ?? this.doctor,
+      department: department ?? this.department,
+      time: time ?? this.department);
 }

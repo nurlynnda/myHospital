@@ -1,17 +1,19 @@
 class Profile {
-  dynamic ic;
-  String firstName;
-  String lastName;
-  String phone;
-  String age;
-  String gender;
+  final dynamic ic;
+  final String firstName;
+  final String lastName;
+  final String phone;
+  final String age;
+  final String gender;
+  final String uid;
 
-  Profile({
+  const Profile({
     this.ic = '',
     this.firstName = '',
     this.lastName = '',
     this.phone = '',
     this.age = '',
+    this.uid = '',
     this.gender = '',
   });
 
@@ -38,7 +40,13 @@ class Profile {
         'firstName': firstName,
         'lastName': lastName,
         'phone': phone,
+        'uid': uid,
         'age': age,
         'gender': gender
       };
+  copyWith({ic, firstName, lastName, phone, uid, age}) => Profile(
+        firstName: firstName ?? this.firstName,
+        lastName: lastName ?? this.lastName,
+        uid: uid ?? this.uid,
+      );
 }
