@@ -1,1 +1,44 @@
-{"__collections__":{"appointment":{"eis2dxnDzEA83qjgySqG":{"doctor":"Dr. Abdullah","specialist":"general","time":{"__datatype__":"timestamp","value":{"_seconds":1645074240,"_nanoseconds":0}},"ID":2,"__collections__":{}},"fCRRGxSHaLe3CyEzHDDl":{"time":{"__datatype__":"timestamp","value":{"_seconds":1643947380,"_nanoseconds":0}},"specialist":"cardiologist","ID":1,"doctor":"Dr. Safiee","__collections__":{}}},"user":{"3IFlv7WKQGI1olTWcI9R":{"password":"pwd123","email":"qudri@gmail.com","__collections__":{}},"aOADoZk502XnTsPVFFJf":{"email":"pgkhairil@gmail.com","password":"pwd456","__collections__":{}}}}}
+{
+    "__collections__": {
+        "appointment": {
+            "eis2dxnDzEA83qjgySqG": {
+                "doctor": "Dr. Abdullah",
+                "specialist": "general",
+                "time": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1645074240,
+                        "_nanoseconds": 0
+                    }
+                },
+                "ID": 2,
+                "__collections__": {}
+            },
+            "fCRRGxSHaLe3CyEzHDDl": {
+                "time": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1643947380,
+                        "_nanoseconds": 0
+                    }
+                },
+                "specialist": "cardiologist",
+                "ID": 1,
+                "doctor": "Dr. Safiee",
+                "__collections__": {}
+            }
+        },
+        "user": {
+            "3IFlv7WKQGI1olTWcI9R": {
+                "password": "pwd123",
+                "email": "qudri@gmail.com",
+                "__collections__": {}
+            },
+            "aOADoZk502XnTsPVFFJf": {
+                "email": "pgkhairil@gmail.com",
+                "password": "pwd456",
+                "__collections__": {}
+            }
+        }
+    }
+}
