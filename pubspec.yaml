@@ -39,6 +39,7 @@ dependencies:
   shared_preferences_web: ^2.0.3
   cloud_firestore: ^3.1.7
   firebase_auth: ^3.3.6
+  uuid: 2.2.2
 
 dev_dependencies:
   flutter_test:
