@@ -6,7 +6,7 @@ import 'package:uuid/uuid.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'firebase.dart';
+import 'package:doctor_app/services/firebase.dart';
 import 'booking_service.dart';
 import '../../models/booking.dart';
 
@@ -26,20 +26,20 @@ class BookingServiceFirestore extends BookingService {
   @override
   Stream get stream => _collection.snapshots();
 
-  @override
-  Future<List<Bookdata>> fetchbooking() async {
-    final snapshot = await _collection.get();
-    return snapshot.docs.map((doc) {
-      final number = Bookdata.fromJson(doc.data()).copyWith(
-          id: doc
-              .id); // transform data. Field id might be null, so take the doc id instead
-      return number;
-    }).toList();
-  }
+   @override
+   Future<List<Bookdata>> fetchbooking() async {
+     final snapshot = await _collection.get();
+     return snapshot.docs.map((doc) {
+       final number = Bookdata.fromJson(doc.data()).copyWith(
+           id: doc
+               .id); // transform data. Field id might be null, so take the doc id instead
+       return number;
+     }).toList();
+   }
 
-  @override
-  Future<Bookdata> getbooking(id) async {
-    final n = await _getNumberDocument(id).get();
-    return Bookdata.fromJson(n.data());
-  }
-}
+   @override
+   Future<Bookdata> getbooking(id) async {
+     final n = await _getNumberDocument(id).get();
+     return Bookdata.fromJson(n.data());
+   }
+ }

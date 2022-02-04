@@ -1,25 +1,25 @@
-class Profile {
-  final dynamic ic;
-  final String firstName;
-  final String lastName;
-  final String phone;
-  final String age;
-  final String gender;
-  final String uid;
+//@dart=2.9
 
-  const Profile({
-    this.ic = '',
-    this.firstName = '',
+class Profile {
+  dynamic id;
+  String firstName;
+  String lastName;
+  String phone;
+  String age;
+  String gender;
+
+  Profile({
+    this.id = '',
+    this.firstName,
     this.lastName = '',
     this.phone = '',
     this.age = '',
-    this.uid = '',
     this.gender = '',
   });
 
   Profile.copy(from)
       : this(
-            ic: from.ic,
+            id: from.ic,
             firstName: from.firstName,
             lastName: from.lastName,
             phone: from.phone,
@@ -28,7 +28,7 @@ class Profile {
 
   Profile.fromJson(Map<String, dynamic> json)
       : this(
-            ic: json['ic'],
+            id: json['ic'],
             firstName: json['firstName'],
             lastName: json['lastName'],
             phone: json['phone'],
@@ -36,17 +36,19 @@ class Profile {
             gender: json['gender']);
 
   Map<String, dynamic> toJson() => {
-        'ic': ic,
+        'id': id,
         'firstName': firstName,
         'lastName': lastName,
         'phone': phone,
-        'uid': uid,
         'age': age,
         'gender': gender
       };
-  copyWith({ic, firstName, lastName, phone, uid, age}) => Profile(
-        firstName: firstName ?? this.firstName,
-        lastName: lastName ?? this.lastName,
-        uid: uid ?? this.uid,
-      );
+
+  copyWith({id, firstName, lastName, phone, age, gender}) => Profile(
+      id: id ?? this.id,
+      firstName: firstName ?? this.firstName,
+      lastName: lastName ?? this.lastName,
+      phone: phone ?? this.phone,
+      age: age ?? this.age,
+      gender: gender ?? this.gender);
 }

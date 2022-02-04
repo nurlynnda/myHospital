@@ -36,10 +36,9 @@ class SignInScreen extends StatelessWidget {
                       "Sign In",
                       style: Theme.of(context)
                           .textTheme
-                          .headline5!
+                          .headline5
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
-                 
                     const SizedBox(height: defaultPadding * 2),
                     SignInForm(formKey: _formKey),
                     const SizedBox(height: defaultPadding * 2),
@@ -51,18 +50,18 @@ class SignInScreen extends StatelessWidget {
                           backgroundColor: Colors.cyan,
                         ),
                         onPressed: () {
-                          if (_formKey.currentState!.validate()) {
+                          if (_formKey.currentState.validate()) {
                             // Sign up form is done
                             // It saved our inputs
-                            _formKey.currentState!.save();
+                            _formKey.currentState.save();
                             //  Sign in also done
                           }
-                          
+
                           Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomePage(),
-                                ));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ));
                         },
                         child: Text("Sign In"),
                       ),

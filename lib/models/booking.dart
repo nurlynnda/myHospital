@@ -17,20 +17,15 @@ class Bookdata {
       : this(
           id: json['id'],
           doctor: json['doctor'],
-          department: json['department'],
-          time: json['time'],
+          department: json['description'],
         );
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'doctor': doctor,
-        'department': department,
-        'time': time,
-      };
+  Map<String, dynamic> toJson() =>
+      {'id': id, 'doctor': doctor, 'description': department};
 
-  copyWith({id, doctor, department, time}) => Bookdata(
+  Bookdata copyWith({id, value}) => Bookdata(
       id: id ?? this.id,
       doctor: doctor ?? this.doctor,
       department: department ?? this.department,
-      time: time ?? this.department);
+      time: time ?? this.time);
 }

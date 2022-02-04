@@ -6,13 +6,13 @@ import 'sign_up_form.dart';
 
 class SignInForm extends StatelessWidget {
   SignInForm({
-    Key? key,
-    required this.formKey,
+    Key key,
+    this.formKey,
   }) : super(key: key);
 
   final GlobalKey formKey;
 
-  late String _email, _password;
+  String _email, _password;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class SignInForm extends StatelessWidget {
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(hintText: "@email.com"),
             validator: EmailValidator(errorText: "Use a valid email!"),
-            onSaved: (email) => _email = email!,
+            onSaved: (email) => _email = email,
           ),
           const SizedBox(height: defaultPadding),
           TextFieldName(text: "Password"),
@@ -35,7 +35,7 @@ class SignInForm extends StatelessWidget {
             obscureText: true,
             decoration: InputDecoration(hintText: "******"),
             validator: passwordValidator,
-            onSaved: (password) => _password = password!,
+            onSaved: (password) => _password = password,
           ),
           const SizedBox(height: defaultPadding),
         ],

@@ -1,9 +1,10 @@
 import 'package:doctor_app/constants.dart';
 import 'package:doctor_app/screens/auth/sign_in_screen.dart';
+import 'package:doctor_app/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,6 @@ class WelcomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       )),
                   Spacer(),
-
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: defaultPadding),
@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignInScreen(),
+                              builder: (context) => LoginScreen(),
                             )),
                         style: TextButton.styleFrom(
                           // backgroundColor: Color(0xFF6CD8D1),

@@ -6,7 +6,7 @@ import '../profile/profile_page.dart';
 import 'package:doctor_app/models/profile.dart';
 
 class BottomNavigation extends StatelessWidget {
-  const BottomNavigation({Key? key, required this.select}) : super(key: key);
+  const BottomNavigation({Key key, this.select}) : super(key: key);
 
   final Menu select;
 

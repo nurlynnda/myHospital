@@ -4,16 +4,16 @@ import 'package:doctor_app/screens/view.dart';
 import 'package:flutter/material.dart';
 
 class ProfileBodyPage extends StatelessWidget {
-  // final int index;
+  final int _id;
 
-  // const ProfileBodyPage(this.index);
+  const ProfileBodyPage(this._id);
 
   @override
   Widget build(BuildContext context) {
     return SelectorView<ProfileViewModel, Profile>(
-        selector: (_, vm) => vm.getProfile(),
+        selector: (_, vm) => vm.getProfile(_id),
         builder: (_, vm, profile, ___) {
-          print('Build ListTile ');
+          // print('Build ListTile ');
 
           return Scaffold(
             backgroundColor: Colors.cyan[800],
@@ -36,7 +36,7 @@ class ProfileBodyPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "IC: ${profile.ic}",
+                  "IC: ${profile.id}",
                   style: TextStyle(
                       fontSize: 30,
                       color: Colors.blueGrey[200],

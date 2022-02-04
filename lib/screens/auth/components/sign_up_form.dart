@@ -5,13 +5,13 @@ import '../../../constants.dart';
 
 class SignUpForm extends StatelessWidget {
   SignUpForm({
-    Key? key,
-    required this.formKey,
+    Key key,
+    this.formKey,
   }) : super(key: key);
 
   final GlobalKey formKey;
 
-  late String _userName, _email, _password, _phoneNumber;
+  String _userName, _email, _password, _phoneNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class SignUpForm extends StatelessWidget {
             decoration: InputDecoration(hintText: "Username"),
             validator: RequiredValidator(errorText: "Username is required"),
             // Let's save our username
-            onSaved: (username) => _userName = username!,
+            onSaved: (username) => _userName = username,
           ),
           const SizedBox(height: defaultPadding),
           // We will fixed the error soon
@@ -36,7 +36,7 @@ class SignUpForm extends StatelessWidget {
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(hintText: "@email.com"),
             validator: EmailValidator(errorText: "Use a valid email!"),
-            onSaved: (email) => _email = email!,
+            onSaved: (email) => _email = email,
           ),
           const SizedBox(height: defaultPadding),
           TextFieldName(text: "Phone"),
@@ -45,7 +45,7 @@ class SignUpForm extends StatelessWidget {
             keyboardType: TextInputType.phone,
             decoration: InputDecoration(hintText: "+123487697"),
             validator: RequiredValidator(errorText: "Phone number is required"),
-            onSaved: (phoneNumber) => _phoneNumber = phoneNumber!,
+            onSaved: (phoneNumber) => _phoneNumber = phoneNumber,
           ),
           const SizedBox(height: defaultPadding),
           TextFieldName(text: "Password"),
@@ -55,7 +55,7 @@ class SignUpForm extends StatelessWidget {
             obscureText: true,
             decoration: InputDecoration(hintText: "******"),
             validator: passwordValidator,
-            onSaved: (password) => _password = password!,
+            onSaved: (password) => _password = password,
             // We also need to validate our password
             // Now if we type anything it adds that to our password
             onChanged: (pass) => _password = pass,
@@ -67,7 +67,7 @@ class SignUpForm extends StatelessWidget {
             decoration: InputDecoration(hintText: "*****"),
             validator: (pass) =>
                 MatchValidator(errorText: "Password do not  match")
-                    .validateMatch(pass!, _password),
+                    .validateMatch(pass, _password),
           ),
         ],
       ),
@@ -77,8 +77,8 @@ class SignUpForm extends StatelessWidget {
 
 class TextFieldName extends StatelessWidget {
   const TextFieldName({
-    Key? key,
-    required this.text,
+    Key key,
+    this.text,
   }) : super(key: key);
 
   final String text;

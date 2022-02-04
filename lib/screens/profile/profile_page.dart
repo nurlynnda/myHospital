@@ -4,7 +4,7 @@ import 'package:doctor_app/screens/profile/profilebody.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  late int index;
+  int index;
 
   //final Profile profile;
 
@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Colors.cyan[200],
         title: Text('Profile'),
       ),
-      body: ProfileBodyPage(),
+      body: ProfileBodyPage(index),
       bottomNavigationBar: BottomNavigation(select: Menu.profile),
     );
   }

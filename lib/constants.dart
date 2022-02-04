@@ -14,7 +14,6 @@ OutlineInputBorder textFieldBorder = OutlineInputBorder(
   ),
 );
 
-
 const emailError = 'Enter a valid email address';
 const requiredField = "This field is required";
 
@@ -26,5 +25,3 @@ final passwordValidator = MultiValidator(
         errorText: 'passwords must have at least one special character')
   ],
 );
-
-

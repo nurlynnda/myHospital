@@ -1,18 +1,14 @@
 // Turn of null-safety by writing the following line
 // @dart=2.9
 
-//? The view classes are fully given. You are not expected to modify this file.
-//? However, if you feel like to add something or do any changes. Feel free to do so.
-
 // Author: jumail@utm.my.
 // Date: Dec 2021
 
-import 'package:doctor_app/app/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
-//import '../app/service_locator.dart';
+import '../app/service_locator.dart';
 import 'viewmodel.dart';
 
 //----------------------------------------------------------------------------
@@ -43,7 +39,8 @@ abstract class _AbstractView<V extends Viewmodel> extends StatelessWidget {
 //----------------------------------------------------------------------------
   static V _viewmodelBuilder<V extends Viewmodel>() {
     final viewmodel = locator<V>();
-    if (!viewmodel.initialized) {
+    var initialized = viewmodel.initialized;
+    if (!initialized) {
       viewmodel.markInitialized();
       viewmodel.init();
     }
@@ -51,8 +48,9 @@ abstract class _AbstractView<V extends Viewmodel> extends StatelessWidget {
   }
 
   static Widget _defaultProgressBuilder(_, __, ___) =>
-      Center(child: CircularProgressIndicator());
-//----------------------------------------------------------------------------
+      Scaffold(body: Center(child: CircularProgressIndicator()));
+
+  //----------------------------------------------------------------------------
 
   _AbstractView(
       {ViewmodelWidgetBuilder<V> progressBuilder = _defaultProgressBuilder,
@@ -71,6 +69,7 @@ abstract class _AbstractView<V extends Viewmodel> extends StatelessWidget {
         return _progressBuilder?.call(context, viewmodel, null);
       }
     }
+
     return _builder?.call(context, viewmodel, child);
   }
 }
@@ -136,6 +135,7 @@ class View<V extends Viewmodel> extends _AbstractView<V> {
       bool showProgressIndicator = true,
       @required ViewmodelWidgetBuilder<V> builder,
       ViewmodelWidgetBuilder<V> progressBuilder,
+      ViewmodelWidgetBuilder<V> errorBuilder,
       Widget child})
       : _shouldRebuild = shouldRebuild,
         super(
@@ -243,6 +243,7 @@ class SelectorView<V extends Viewmodel, S> extends _AbstractView<V> {
       @required ViewmodelSelectorWidgetBuilder<V, S> builder,
       @required ViewmodelSelector<V, S> selector,
       ViewmodelWidgetBuilder<V> progressBuilder,
+      ViewmodelWidgetBuilder<V> errorBuilder,
       Widget child})
       : _selector = selector,
         super(
